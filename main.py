@@ -1,30 +1,14 @@
-import nextcord
-import config
-import os
-from nextcord.ext import commands
+import discord
+from discord.ext import commands
 
-intents = nextcord.Intents.all()
-intents.members = True
+from apis import *
 
-bot = commands.Bot(command_prefix = '!', intents = intents)
+intents = discord.Intents.all()
+
+bot = commands.Bot(command_prefix="!", intents=intents)
 
 @bot.event
 async def on_ready():
-    print(f'Hello, I am your personal Master OAS Troubleshooter')
-    print('______________________________________________________')
+    print ("I'm Ready!")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-bot.run(config.TOKEN)
+bot.run(TOKEN)
