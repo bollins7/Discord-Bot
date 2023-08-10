@@ -5,7 +5,6 @@ from discord.ext import commands
 from apis import *
 
 intents = discord.Intents.all()
-intents.message_content = True
 
 bot = commands.Bot(command_prefix="!", intents=intents)
 
@@ -14,7 +13,14 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 async def on_ready():
     print ("I'm Ready!")
 
-if message.content.startswith('!hello'):
-    await message.channel.send('Hello bro!')
+@bot.command()
+async def hello(ctx):
+    await ctx.send("Hello, I am your master troubleshooter")
+
+@bot.command()
+async def ass(ctx):
+    await ctx.send("Bend over and give it to me")
+
+
 
 bot.run (TOKEN)
