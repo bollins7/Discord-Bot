@@ -21,5 +21,9 @@ async def hello(ctx):
 async def ass(ctx):
     await ctx.send("Bend over and give it to me")
 
+@bot.command()
+async def dumbo(ctx):
+    await ctx.send("It's what you are")
+
 
 bot.run (TOKEN)
