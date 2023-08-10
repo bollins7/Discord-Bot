@@ -22,5 +22,4 @@ async def ass(ctx):
     await ctx.send("Bend over and give it to me")
 
 
-
 bot.run (TOKEN)
